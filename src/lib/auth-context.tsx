@@ -8,6 +8,7 @@ import {
   getAdditionalUserInfo,
   signOut as firebaseSignOut,
   updateProfile,
+  sendEmailVerification,
   User,
 } from "firebase/auth";
 import { doc, setDoc, getFirestore } from "firebase/firestore";
@@ -72,6 +73,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     localStorage.removeItem("ctt_guest_mode");
     const cred = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(cred.user, { displayName: name });
+    try {
+      await sendEmailVerification(cred.user);
+    } catch {
+      // Gagal mengirim email verifikasi, pengguna tetap bisa login
+    }
     const db = getFirestore();
     await setDoc(doc(db, "users", cred.user.uid), {
       uid: cred.user.uid,

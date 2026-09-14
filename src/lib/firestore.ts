@@ -23,7 +23,7 @@ export async function saveTodos(todos: TodoItem[]) {
   old.docs.forEach((d) => batch.delete(d.ref));
   for (const t of todos) {
     const ref = doc(getUserCollection("todos"), t.id);
-    batch.set(ref, { ...t, updatedAt: serverTimestamp() });
+    batch.set(ref, { ...t, userId: auth.currentUser!.uid, updatedAt: serverTimestamp() });
   }
   await batch.commit();
 }
@@ -40,7 +40,7 @@ export async function saveTransactions(txs: Transaction[]) {
   old.docs.forEach((d) => batch.delete(d.ref));
   for (const t of txs) {
     const ref = doc(getUserCollection("transactions"), t.id);
-    batch.set(ref, { ...t, updatedAt: serverTimestamp() });
+    batch.set(ref, { ...t, userId: auth.currentUser!.uid, updatedAt: serverTimestamp() });
   }
   await batch.commit();
 }
@@ -57,7 +57,7 @@ export async function saveSavingsPlans(plans: SavingsPlan[]) {
   old.docs.forEach((d) => batch.delete(d.ref));
   for (const p of plans) {
     const ref = doc(getUserCollection("savings_plans"), p.id);
-    batch.set(ref, { ...p, updatedAt: serverTimestamp() });
+    batch.set(ref, { ...p, userId: auth.currentUser!.uid, updatedAt: serverTimestamp() });
   }
   await batch.commit();
 }
@@ -74,7 +74,7 @@ export async function saveSavingsTransactions(txs: SavingsTransaction[]) {
   old.docs.forEach((d) => batch.delete(d.ref));
   for (const t of txs) {
     const ref = doc(getUserCollection("savings_transactions"), t.id);
-    batch.set(ref, { ...t, updatedAt: serverTimestamp() });
+    batch.set(ref, { ...t, userId: auth.currentUser!.uid, updatedAt: serverTimestamp() });
   }
   await batch.commit();
 }
@@ -91,7 +91,7 @@ export async function saveBudgetLimits(limits: BudgetLimit[]) {
   old.docs.forEach((d) => batch.delete(d.ref));
   for (const l of limits) {
     const ref = doc(getUserCollection("budget_limits"), l.id);
-    batch.set(ref, { ...l, updatedAt: serverTimestamp() });
+    batch.set(ref, { ...l, userId: auth.currentUser!.uid, updatedAt: serverTimestamp() });
   }
   await batch.commit();
 }
@@ -108,7 +108,7 @@ export async function saveRecurringTransactions(txs: RecurringTransaction[]) {
   old.docs.forEach((d) => batch.delete(d.ref));
   for (const t of txs) {
     const ref = doc(getUserCollection("recurring_transactions"), t.id);
-    batch.set(ref, { ...t, updatedAt: serverTimestamp() });
+    batch.set(ref, { ...t, userId: auth.currentUser!.uid, updatedAt: serverTimestamp() });
   }
   await batch.commit();
 }

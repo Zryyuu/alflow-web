@@ -513,7 +513,7 @@ export default function Home() {
                 <Link href="/login" className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 text-[15px] font-semibold text-[#1597e5] hover:bg-white/90 transition-all shadow-lg" style={{ boxShadow: "0 8px 30px rgba(0,0,0,.1)" }}>
                   Mulai Gratis <ArrowRight className="h-4 w-4" />
                 </Link>
-                <a href="https://github.com/Zryyuu/zyto-web/releases/latest" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border-2 border-white/40 px-8 py-3 text-[15px] font-medium text-white hover:bg-white/10 transition-all">
+                <a href="https://github.com/Zryyuu/alflow-app/releases/latest" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border-2 border-white/40 px-8 py-3 text-[15px] font-medium text-white hover:bg-white/10 transition-all">
                   <Download className="h-4 w-4" /> Download APK
                 </a>
               </div>
@@ -543,7 +543,7 @@ export default function Home() {
                 <li><button onClick={() => scrollToId("beranda")} className="text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors">Beranda</button></li>
                 <li><button onClick={() => scrollToId("fitur")} className="text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors">Fitur</button></li>
                 <li><button onClick={() => scrollToId("cara")} className="text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors">Cara Kerja</button></li>
-                <li><a href="https://github.com/Zryyuu/zyto-web/releases/latest" target="_blank" rel="noopener noreferrer" className="text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors">Unduh APK</a></li>
+                <li><a href="https://github.com/Zryyuu/alflow-app/releases/latest" target="_blank" rel="noopener noreferrer" className="text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors">Unduh APK</a></li>
               </ul>
             </div>
 
@@ -562,7 +562,7 @@ export default function Home() {
             <div>
               <p className="text-[13px] font-semibold text-[#0f172a] mb-4">Kontak</p>
               <ul className="space-y-2.5">
-                <li><a href="https://github.com/Zryyuu/zyto-web" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors"><Github className="h-4 w-4" /> GitHub</a></li>
+                <li><a href="https://github.com/Zryyuu/alflow-web" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors"><Github className="h-4 w-4" /> GitHub</a></li>
                 <li><a href="https://instagram.com/alflow" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[14px] text-[#64748b] hover:text-[#1597e5] transition-colors">
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                   Instagram
